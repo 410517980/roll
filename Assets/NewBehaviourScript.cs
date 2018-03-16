@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour {
-    		public float speed;
-        Rigidbody rb;
-	
+    Rigidbody rb;
+    public float speed;
 	// Use this for initialization
-    void Start()
-    {
-        rb = GetComponent <Rigidbody>();
-    }
+	void Start () {
+
+
+        rb = GetComponent<Rigidbody>();
+	}
 	
 	// Update is called once per frame
 	void Update () {
-        float x = Input.GetAxis("Horizontal");
-        float z= Input.GetAxis("Vertical");
+		float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
         //transform.Translate(x, 0, z);
-         rb.AddForce( new Vector3(x, 0, z)*speed);
-      
+
+        rb.AddForce(new Vector3(x, 0, z)*speed);
 	}
 }
